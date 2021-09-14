@@ -1,0 +1,44 @@
+/* TITLE AND SUBTITLES */
+
+.title{
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 48px;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5rem;
+}
+
+/* FORM */
+
+.search-button{
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+form{
+    text-align: center;
+    margin-bottom: 3rem
+}
+
+form input{
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 6rem;
+}
+
+/* RESULT */
+
+.result{
+    text-align: center;
+}
+
+span{
+    text-align: center;
+    font-size: 20px;
+}
