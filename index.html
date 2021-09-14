@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbres de Paris</title>
+</head>
+
+<body>
+    <label for="arr">Arrondissement</label>
+    <input type="number" name="arr" id="arr" value="1" min="1" max="20">
+    <button>Chercher</button>
+
+    <br>
+    <span></span>
+</body>
+
+<script>
+    const button = document.querySelector('button')
+    const input = document.querySelector('input')
+    const span = document.querySelector('span')
+
+    button.addEventListener('click', () => {
+        if (1 <= input.value && input.value <= 20) {
+            const url = `https://opendata.paris.fr/api/records/1.0/search/?dataset=arbresremarquablesparis&q=arrondissement%3DPARIS+${input.value}E+ARRDT`
+            fetch(url).then(function (response) {
+                response.json().then(function (data) {
+                    span.innerText = `Il y a ${data.nhits} arbres remarquables dans l'arrondissement numéro ${input.value}`;
+                });
+            })
+        } else {
+            span.innerText = `Cet arrondissement n'existe pas`;
+        }
+    })
+</script>
+
+</html>
