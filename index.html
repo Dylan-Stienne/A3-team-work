@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Les infos du quartier</title>
 </head>
 
 <body>
+    <h1 class="title">Arbres de Paris</h1>
+    <h2 class="subtitle">Retrouvez le nombre d'arbres remarquables dans votre arrondissement</h2>
     <form>
         <label for="arr">Arrondissement</label>
         <input type="number" name="arr" id="arr" value="1" min="1" max="20">
-        <button type="submit">Chercher</button>
+        <button class="search-button" type="submit">Chercher</button>
     </form>
 
-    <span></span>
+    <div class="result">
+        <span></span>
+    </div>
 </body>
 
 <style>
